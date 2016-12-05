@@ -1,0 +1,24 @@
+{
+    "name": "nerine-service-schedule",
+    "version": "1.0.0",
+    "description": "Programa tareas y ejecuta peticiones",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Luis Josafat Heredia Contreras",
+    "license": "ISC",
+    "dependencies": {
+        "express": ">=4.12.4",
+        "node-schedule": ">=0.2.8",
+        "lokijs": "^1.3.8",
+        "body-parser": "^1.13.2",
+        "express-validator": "^2.13.0",
+        "validator": "^3.41.1",
+        "node.extend": "^1.1.5",
+        "request": ">=2.58.0",
+        "winston": ">=1.0.1",
+        "jsface": "^2.4.9",
+        "redis": "^2.6.3"
+    }
+}
