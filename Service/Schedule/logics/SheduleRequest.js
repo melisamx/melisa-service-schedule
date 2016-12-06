@@ -33,7 +33,7 @@ function runJob(event) {
             'User-Agent': 'Mozilla/5.0 (Nerine services schedule)'
         },
         auth: {
-            user: 'scheduleJobsService',
+            user: 'robot.schedule@melisa.mx',
             pass: 'sWeld#s02'
         }
     }, onCallBack.bind(event));
@@ -68,7 +68,7 @@ function onCallBack(err, response, body) {
         
     } else {
         
-        logger.error('response no json in url %s', this.urlRun);
+        logger.error('response no json in url %s, response: %s', this.urlRun, body);
         
     }
     
