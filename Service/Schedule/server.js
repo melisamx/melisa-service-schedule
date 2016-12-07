@@ -2,7 +2,7 @@ var redis = require('redis'),
     redisSubscribe = redis.createClient(),
     sheduleRequest = require('./logics/SheduleRequest');
 
-function onBinnacleAdded(channel, data) {
+function onNewJob(channel, data) {
     
     var event = JSON.parse(data);
     
@@ -10,7 +10,7 @@ function onBinnacleAdded(channel, data) {
     
 };
 
-redisSubscribe.on('message', onBinnacleAdded);
+redisSubscribe.on('message', onNewJob);
 
-redisSubscribe.subscribe('binnacle.added');
-console.log('Listen binnacle.added ');
+redisSubscribe.subscribe('new.job');
+console.log('Listen new.job ');
