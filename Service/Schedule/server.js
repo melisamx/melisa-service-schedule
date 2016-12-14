@@ -6,6 +6,7 @@ function onNewJob(channel, data) {
     
     var event = JSON.parse(data);
     
+    console.log('on new job', data);
     sheduleRequest.create(event.urlRun, event.postData, event.dateRun);
     
 };
