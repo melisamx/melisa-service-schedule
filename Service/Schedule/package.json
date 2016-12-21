@@ -1,5 +1,5 @@
 {
-    "name": "nerine-service-schedule",
+    "name": "melisa-service-schedule",
     "version": "1.0.0",
     "description": "Programa tareas y ejecuta peticiones",
     "main": "index.js",
