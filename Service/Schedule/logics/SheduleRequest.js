@@ -1,5 +1,7 @@
 var schedule = require('node-schedule'),
-    logger = require('./Logger');
+    logger = require('./Logger'),
+    request = require('request'),
+    config = require('config');
 
 function init(urlRun, postData, dateRun) {
     
@@ -24,17 +26,15 @@ function init(urlRun, postData, dateRun) {
 
 function runJob(event) {
     
-    var request = require('request');
-    
     request.post({
         url: event.urlRun,
         form: event.postData,
         headers: {
-            'User-Agent': 'Mozilla/5.0 (Nerine services schedule)'
+            'User-Agent': 'Mozilla/5.0 (Melisa services schedule)'
         },
         auth: {
-            user: 'scheduleJobsService',
-            pass: 'sWeld#s02'
+            user: config.get('request.user'),
+            pass: config.get('request.pass')
         }
     }, onCallBack.bind(event));
     
@@ -68,7 +68,7 @@ function onCallBack(err, response, body) {
         
     } else {
         
-        logger.error('response no json in url %s', this.urlRun);
+        logger.error('response no json in url %s, response: %s', this.urlRun, body);
         
     }
     

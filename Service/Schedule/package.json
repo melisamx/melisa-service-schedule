@@ -1,5 +1,5 @@
 {
-    "name": "nerine-service-schedule",
+    "name": "melisa-service-schedule",
     "version": "1.0.0",
     "description": "Programa tareas y ejecuta peticiones",
     "main": "index.js",
@@ -19,6 +19,7 @@
         "request": ">=2.58.0",
         "winston": ">=1.0.1",
         "jsface": "^2.4.9",
-        "redis": "^2.6.3"
+        "redis": "^2.6.3",
+        "config": "^1.24.0"
     }
 }
